@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "ShieldedSurf",
+    "version": "1.0",
+    "description": "RBI solution",
+    "host_permissions": [
+        "http://localhost:5000/*"
+    ],
+    "icons": {
+       "16": "cropped.png"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}
