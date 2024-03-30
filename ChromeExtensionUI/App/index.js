@@ -10,15 +10,6 @@ async function sendGetRequest () {
   const currentTab = await getCurrentTab() // Get the current tab
   const currentUrl = currentTab.url // Get the URL of the current tab
   console.log('Current URL:', currentUrl)
-
-  const urlCheck = new URL('https://linkshieldapi.com/api/v1/link/score')
-
-  const headers = {
-    Authorization: 'Bearer T9ZVNvMukPWfmJ3LuMCfpTlbwk7I6XwWYnN1uWDY',
-    'Content-Type': 'application/json',
-    Accept: 'application/json'
-  }
-
   risk_score = 0
 
   let body = {
