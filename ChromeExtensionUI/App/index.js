@@ -1,41 +1,33 @@
 document.getElementById('runButton').addEventListener('click', sendGetRequest)
+document
+  .getElementById('deleteButton')
+  .addEventListener('click', removeContainer)
 
-async function getURL () {
-  const currentTab = await getCurrentTab() // Get the current tab
-  const currentUrl = currentTab.url // Get the URL of the current tab
-  console.log('Current URL: ' + currentUrl)
+async function removeContainer () {
+  const currentTab = await getCurrentTab()
+  const currentUrl = currentTab.url
+
+  var currUrl = new URL(currentUrl)
+  console.log(currUrl.port)
 }
 
 async function sendGetRequest () {
   const currentTab = await getCurrentTab() // Get the current tab
   const currentUrl = currentTab.url // Get the URL of the current tab
   console.log('Current URL:', currentUrl)
-  risk_score = 0
 
   let body = {
     url: currentUrl,
     follow_redirects: false
   }
 
-  fetch(urlCheck, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(body)
-  })
-    .then(response => response.json())
-    .then(data => {
-      risk_score = data['risk_score']
-    })
-    .catch(error => {
-      console.error('Error:', error) // Print any errors to the console
-    })
-
+  risk_score = 8
   if (risk_score < 10) {
     const fUrl = `http://localhost:5000/?url=${currentUrl}`
 
     try {
       const response = await fetch(fUrl, {
-        method: 'GET'` `
+        method: 'GET'
       })
 
       if (!response.ok) {
