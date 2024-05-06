@@ -9,6 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            min-width:300px;
+            background-color: #5384b4;
         }
         .container {
             max-width: 600px;
@@ -28,18 +30,6 @@
             min-height: 100px;
             max-height: 200px;
         }
-        button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
         hr {
             border: none;
             border-top: 1px solid #ccc;
@@ -53,16 +43,29 @@
             background-color: #f9f9f9;
             min-height: 100px;
         }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .button-container button {
+            margin: 0 10px; /* Adjust margin as needed */
+        }
+
     </style>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container">
-        <h1>ShieldedSurf</h1>
-        <textarea id="URL" placeholder="Enter your URL here..."></textarea>
-        <button id="runButton">Start Remote Browser</button>
-        <button id="deleteButton">Delete Browser</button>
-        <hr/>
-        <div id="output"></div>
+    <div class="container">       
+        <div class="button-container">
+            <button id="runButton" class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                Start Remote Session
+            </button>
+            <button id="deleteButton" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                End Remote Session
+            </button>
+        </div>    <br/>
     </div>
     
     <script src="index.js"></script>

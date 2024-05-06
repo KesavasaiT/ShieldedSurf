@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -36,3 +40,4 @@ button:hover {
 #output {
     margin-top: 20px;
 }
+
