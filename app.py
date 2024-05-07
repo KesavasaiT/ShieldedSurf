@@ -40,6 +40,18 @@ def run_container():
     except docker.errors.APIError as e:
         return f"Error: {e}"
     
+@app.route('/delete', methods=['POST'])
+def delete_container():
+    request_data = request.get_json()
+    print(docker_client.containers.list())
+    for environs in docker_client.containers.list():
+            port = environs.ports['5800/tcp'][0]['HostPort']
+            if port == request_data['port']:
+                environs.stop()
+                environs.remove()
+                return "Container {} is deleted".format(port)
+    return "Not found"
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
