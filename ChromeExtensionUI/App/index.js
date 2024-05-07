@@ -8,7 +8,17 @@ async function removeContainer () {
   const currentUrl = currentTab.url
 
   var currUrl = new URL(currentUrl)
-  console.log(currUrl.port)
+  cPort = currUrl.port
+
+  fetch('http://localhost:5000/delete', {
+    method: 'POST',
+    body: JSON.stringify({
+      port: currUrl.port
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8'
+    }
+  })
 }
 
 async function sendGetRequest () {
