@@ -10,6 +10,8 @@ The following source states that at any given time, 4.1 million sites are infect
 
 It's important to have a service that protects you from online threats, while ensuring your productivity and streamlined day-to-day tasks.
 
+That is where **ShielededSurf** comes in. **ShieldedSurf** comprises of a RBI solution that sandboxes malicious websites (or suspected ones) into a containerized, remote environment. It shields your endpoint devices and personal devices from malicious downloads and allows you to go about your day. 💻
+
 
 Docker image utilized: jlesage/docker-firefox
 
