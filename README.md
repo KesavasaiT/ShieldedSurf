@@ -6,6 +6,7 @@ Imagine you are surfing the web, and you click on a link. You are familiar with 
 You click on that link and it downloads something onto your desktop. By the time you notice, it is too late. You have been successfully exploited.
 
 Source: https://www.forbes.com/advisor/education/it-and-tech/cybersecurity-statistics/#Sources
+
 The following source states that at any given time, 4.1 million sites are infected with malware.
 
 It's important to have a service that protects you from online threats, while ensuring your productivity and streamlined day-to-day tasks.
