@@ -19,6 +19,10 @@ Docker image utilized: jlesage/docker-firefox
 # Basic Flow
 ![image](https://github.com/user-attachments/assets/7ed02b78-fb4a-4a8a-9f6c-f32706de199c)
 
+1) User, with ShieldedSurf Chrome Extension, clicks on malicious website masquerading as a safe website
+2) ShieldedSurf containerizes the website to shield the user from any malicious downloads
+3) The user safely browses the website in the remote environment with confidence because he/she is secured from any threats
+
 # Current Progress
 I have a bash file that will locally create a remote browser based on the URL from user input.
 ![PoC-OnPrem](poc_onprem.png)
